@@ -33,7 +33,6 @@ Self.parse = function(data){
     var results = {}
 
     const data_eachline = data.split("<")
-    console.log(data_eachline)
 
     for( i in data_eachline ){
         if(data_eachline[i].indexOf(">") != -1 && data_eachline[i].indexOf("/") == -1){
@@ -51,9 +50,6 @@ Self.parse = function(data){
             }else{
                 upper_root = root
                 upper_root_data = data_eachline.slice(i, data_eachline.indexOf(`/${root}>\n`))
-
-                console.log(upper_root)
-                console.log(upper_root_data)
             }
         }
     }
